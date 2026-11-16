@@ -39,6 +39,10 @@
   .project h3 { font-size:1.12rem; margin:0 0 4px; }
   .tools { font-family:Helvetica, Arial, sans-serif; font-size:0.8rem; color:var(--muted); margin:0 0 6px; letter-spacing:0.02em; }
   .project p { margin:0; }
+  .project { display:flex; gap:18px; align-items:flex-start; }
+  .thumb { flex:0 0 120px; width:120px; height:80px; object-fit:cover; border:1px solid var(--line); border-radius:6px; margin-top:4px; background:#fff; }
+  .project-text { min-width:0; }
+  @media (max-width:520px){ .thumb{ flex-basis:84px; width:84px; height:56px; } .project{ gap:12px; } }
   footer { margin-top:48px; color:var(--muted); font-size:0.9rem; }
 </style>
 </head>
@@ -69,29 +73,44 @@
     <h2>Property &amp; Casualty</h2>
 
     <a class="project" href="https://shaneghim.github.io/elninobuhlmann/">
+      <img class="thumb" src="thumbs/elninobuhlmann.jpg" alt="">
+      <div class="project-text">
       <h3>Does a Strong El Ni&ntilde;o Raise California Flood Losses?</h3>
       <p class="tools">R &middot; B&uuml;hlmann credibility &middot; FEMA NFIP and NOAA data</p>
       <p>A credibility analysis of 51,862 California flood claims from 1979 to 2025. The average strong El Ni&ntilde;o winter cost around 1.61 times a normal winter, but the effect hinged on two severe winters, and county histories weren&rsquo;t credible enough to differ from the statewide factor.</p>
+      </div>
     </a>
     <a class="project" href="https://shaneghim.github.io/lossreserving/">
+      <img class="thumb" src="thumbs/lossreserving.jpg" alt="">
+      <div class="project-text">
       <h3>Loss Reserving: Chain Ladder vs. Bornhuetter-Ferguson</h3>
       <p class="tools">Excel &middot; CAS Schedule P data</p>
       <p>Paid loss triangles for a large auto insurer, backtested against actual outcomes. BF stayed within 3% for the most recent accident years, while chain ladder overestimated 2007 by 7.5%.</p>
+      </div>
     </a>
     <a class="project" href="https://shaneghim.github.io/claimfreq/">
+      <img class="thumb" src="thumbs/claimfreq.jpg" alt="">
+      <div class="project-text">
       <h3>Auto Claim Frequency: Poisson GLM vs. GAM</h3>
       <p class="tools">R &middot; French motor third-party liability data</p>
       <p>Frequency models tested on a 20% holdout. The riskiest 10% of policies had around six times the claim rate of the safest 10%.</p>
+      </div>
     </a>
     <a class="project" href="https://shaneghim.github.io/floodclaimsdashboard/">
+      <img class="thumb" src="thumbs/floodclaimsdashboard.jpg" alt="">
+      <div class="project-text">
       <h3>U.S. Flood Insurance Claims Dashboard</h3>
       <p class="tools">SQL &middot; Power BI &middot; 2.7 million FEMA claims</p>
       <p>A SQL to Power BI pipeline and interactive dashboard. Three hurricanes made up 37.7% of all payments, and claims in moderate to low-risk zones averaged close to those in high-risk zones.</p>
+      </div>
     </a>
     <a class="project" href="https://shaneghim.github.io/wildfirenonrenewals/">
+      <img class="thumb" src="thumbs/wildfirenonrenewals.jpg" alt="">
+      <div class="project-text">
       <h3>California Wildfire Non-Renewal Analysis</h3>
       <p class="tools">Python &middot; GIS &middot; CDI and CAL FIRE data</p>
       <p>Non-renewal data for around 1,800 ZIP codes joined to fire hazard zones. Insurer-initiated non-renewals in high-hazard areas rose 66% after the 2017 and 2018 fire seasons.</p>
+      </div>
     </a>
   </section>
 
@@ -99,19 +118,28 @@
     <h2>Life &amp; Health</h2>
 
     <a class="project" href="https://shaneghim.github.io/termlifepricing/">
+      <img class="thumb" src="thumbs/termlifepricing.jpg" alt="">
+      <div class="project-text">
       <h3>Term Life Insurance Pricing</h3>
       <p class="tools">Excel &middot; VBA &middot; SOA 2017 CSO mortality tables</p>
       <p>Net premiums and year-by-year reserves for a level term policy, with scenario and sensitivity testing. Issuing at age 45 instead of 35 raised the premium by 80%.</p>
+      </div>
     </a>
     <a class="project" href="https://shaneghim.github.io/premiumsbyage/">
+      <img class="thumb" src="thumbs/premiumsbyage.jpg" alt="">
+      <div class="project-text">
       <h3>How Health Insurance Premiums Vary by Age</h3>
       <p class="tools">R &middot; ACA Marketplace data, 2014 to 2016</p>
       <p>792,704 premium records cleaned and compared by age. Premiums stay nearly flat until the 30s, then rise to around 2.9 times the age-21 premium by 64, just under the ACA&rsquo;s 3:1 limit.</p>
+      </div>
     </a>
     <a class="project" href="https://shaneghim.github.io/lacountyuninsuredmap/">
+      <img class="thumb" src="thumbs/lacountyuninsuredmap.jpg" alt="">
+      <div class="project-text">
       <h3>Mapping Health Insurance in Los Angeles County</h3>
       <p class="tools">R &middot; Census ACS data</p>
       <p>An interactive map of uninsured rates across around 2,500 census tracts and 261 neighborhoods. About 8.2% of county residents are uninsured, and five neighborhoods hold around 3% of residents but 7.5% of the uninsured.</p>
+      </div>
     </a>
   </section>
 
@@ -119,9 +147,12 @@
     <h2>Finance</h2>
 
     <a class="project" href="https://shaneghim.github.io/bondriskmodel/">
+      <img class="thumb" src="thumbs/bondriskmodel.jpg" alt="">
+      <div class="project-text">
       <h3>Bond Portfolio Interest Rate Risk Model</h3>
       <p class="tools">Excel &middot; FRED yield data</p>
       <p>A $6M Treasury portfolio stress-tested under nine rate scenarios. Adding convexity to duration kept the estimation error under 0.5 points.</p>
+      </div>
     </a>
   </section>
 </main>
